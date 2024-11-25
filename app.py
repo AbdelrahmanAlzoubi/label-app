@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
+from github import Github
+
+# Authenticate with GitHub
+g = Github("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")
+repo = g.get_repo("wolfabod/label-app")
+
 # Load Metadata
 metadata_file = "metadata.csv"  # Path to your CSV file
 images_folder = "images/"  # Folder where images are stored
@@ -44,6 +50,18 @@ if st.button("Save Changes"):
     metadata.at[current_index, "gender"] = gender
     metadata.to_csv(metadata_file, index=False)
     st.success("Changes saved!")
+
+# Get the file to update
+contents = repo.get_contents("metadata.csv")
+
+# Update the file
+with open("metadata.csv", "r") as file:
+    updated_content = file.read()
+repo.update_file(contents.path, "Update metadata", updated_content, contents.sha)
+print("Metadata updated on GitHub!")
+
+
+
 
 # Navigation
 col1, col2 = st.columns(2)
