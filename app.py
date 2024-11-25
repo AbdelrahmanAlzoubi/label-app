@@ -6,7 +6,7 @@ import os
 
 # Authenticate with GitHub
 # Use an environment variable to securely store your token (recommended)
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 g = Github(GITHUB_TOKEN)
 
 # Define repository and file paths
