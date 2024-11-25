@@ -1,15 +1,21 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-
 from github import Github
+import os
 
 # Authenticate with GitHub
-g = Github("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")
-repo = g.get_repo("wolfabod/label-app")
+# Use an environment variable to securely store your token (recommended)
+GITHUB_TOKEN = "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"
+g = Github(GITHUB_TOKEN)
+
+# Define repository and file paths
+REPO_NAME = "wolfabod/label-app"  # Replace with your GitHub repository name
+FILE_PATH = "metadata.csv"  # Path to metadata.csv in your GitHub repo
+repo = g.get_repo(REPO_NAME)
 
 # Load Metadata
-metadata_file = "metadata.csv"  # Path to your CSV file
+metadata_file = FILE_PATH  # Path to your local CSV file
 images_folder = "images/"  # Folder where images are stored
 metadata = pd.read_csv(metadata_file)
 
@@ -43,25 +49,36 @@ gender = st.selectbox("Gender", options=["Male", "Female", "Other"], index=["Mal
 
 # Save changes
 if st.button("Save Changes"):
+    # Update the metadata dataframe locally
     metadata.at[current_index, "projection"] = projection
     metadata.at[current_index, "presentation"] = presentation
     metadata.at[current_index, "findings"] = findings
     metadata.at[current_index, "age"] = age
     metadata.at[current_index, "gender"] = gender
+
+    # Save the updated metadata locally
     metadata.to_csv(metadata_file, index=False)
-    st.success("Changes saved!")
+    st.success("Changes saved locally!")
 
-# Get the file to update
-contents = repo.get_contents("metadata.csv")
+    # Push changes to GitHub
+    try:
+        # Get the file to update from the repository
+        contents = repo.get_contents(FILE_PATH)
 
-# Update the file
-with open("metadata.csv", "r") as file:
-    updated_content = file.read()
-repo.update_file(contents.path, "Update metadata", updated_content, contents.sha)
-print("Metadata updated on GitHub!")
+        # Read the updated local file
+        with open(metadata_file, "r") as file:
+            updated_content = file.read()
 
-
-
+        # Update the file on GitHub
+        repo.update_file(
+            path=contents.path,
+            message="Update metadata",
+            content=updated_content,
+            sha=contents.sha
+        )
+        st.success("Changes successfully pushed to GitHub!")
+    except Exception as e:
+        st.error(f"Failed to push changes to GitHub: {e}")
 
 # Navigation
 col1, col2 = st.columns(2)
