@@ -6,7 +6,7 @@ import os
 
 # Authenticate with GitHub
 # Use an environment variable to securely store your token (recommended)
-g = Github("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")
+g = Github("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")
 repo = g.get_repo("wolfabod/label-app")
 
 FILE_PATH = "metadata.csv"  # Path to metadata.csv in your GitHub repo
