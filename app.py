@@ -6,13 +6,10 @@ import os
 
 # Authenticate with GitHub
 # Use an environment variable to securely store your token (recommended)
-GITHUB_TOKEN = "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"
-g = Github(GITHUB_TOKEN)
+g = Github("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")
+repo = g.get_repo("wolfabod/label-app")
 
-# Define repository and file paths
-REPO_NAME = "wolfabod/label-app"  # Replace with your GitHub repository name
 FILE_PATH = "metadata.csv"  # Path to metadata.csv in your GitHub repo
-repo = g.get_repo(REPO_NAME)
 
 # Load Metadata
 metadata_file = FILE_PATH  # Path to your local CSV file
