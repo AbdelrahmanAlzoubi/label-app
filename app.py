@@ -9,7 +9,7 @@ import hashlib
 # --- GitHub Setup ---
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 g = Github(GITHUB_TOKEN)
-REPO_NAME = "Abdullahshade/NIHApp"
+REPO_NAME = "AbdelrahmanAlzoubi/label-app"
 FILE_PATH = "Pneumothorax_AP_metadata.csv"
 images_folder = "outputimages0"
 
