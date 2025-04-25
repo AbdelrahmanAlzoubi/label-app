@@ -10,8 +10,8 @@ import hashlib
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 g = Github(GITHUB_TOKEN)
 REPO_NAME = "AbdelrahmanAlzoubi/label-app"
-FILE_PATH = "Pneumothorax_AP_metadata.csv"
-images_folder = "outputimages0"
+FILE_PATH = "Chunk1.csv"
+images_folder = "Chunk1"
 
 # --- Load Data with Validation ---
 def load_data():
