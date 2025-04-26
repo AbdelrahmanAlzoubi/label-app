@@ -163,7 +163,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 162,1_1_243.png,Simple,Large,Left,1.0,True
 163,1_1_244.png,Tension,Large,Right,1.0,False
 164,1_1_245.png,Tension,Large,Right,1.0,False
-165,1_1_246.png,,,,0.0,
+165,1_1_246.png,Tension,Large,Left,1.0,False
 166,1_1_247.png,,,,0.0,
 167,1_1_248.png,,,,0.0,
 168,1_1_249.png,,,,0.0,
