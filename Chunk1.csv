@@ -14,7 +14,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 13,1_1_109.png,Simple,Small,Right,1.0,False
 14,1_1_11.png,,,,,
 15,1_1_110.png,Simple,Small,Right,1.0,True
-16,1_1_111.png,,,,,
+16,1_1_111.png,Simple,Small,Right,1.0,True
 17,1_1_112.png,,,,,
 18,1_1_113.png,,,,,
 19,1_1_114.png,,,,,
