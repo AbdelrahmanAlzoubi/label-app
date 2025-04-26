@@ -98,7 +98,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 97,1_1_185.png,Tension,Small,Left,1.0,True
 98,1_1_186.png,Simple,Small,Left,1.0,True
 99,1_1_187.png,Simple,Small,Left,1.0,False
-100,1_1_188.png,,,,0.0,
+100,1_1_188.png,Simple,Small,Left,1.0,False
 101,1_1_189.png,,,,0.0,
 102,1_1_19.png,,,,0.0,
 103,1_1_190.png,,,,0.0,
