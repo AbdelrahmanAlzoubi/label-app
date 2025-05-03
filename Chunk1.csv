@@ -440,7 +440,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 439,1_1_493.png,Tension,Large,Right,1.0,False
 440,1_1_494.png,Tension,Large,Right,1.0,True
 441,1_1_495.png,Simple,Large,Left,1.0,False
-442,1_1_496.png,,,,0.0,
+442,1_1_496.png,Simple,Large,Left,1.0,True
 443,1_1_497.png,,,,0.0,
 444,1_1_498.png,,,,0.0,
 445,1_1_499.png,,,,0.0,
