@@ -413,7 +413,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 412,1_1_469.png,Tension,Large,Left,1.0,True
 413,1_1_47.png,Tension,Large,Left,1.0,False
 414,1_1_470.png,Tension,Large,Left,1.0,False
-415,1_1_471.png,,,,0.0,
+415,1_1_471.png,Tension,Large,Left,1.0,True
 416,1_1_472.png,,,,0.0,
 417,1_1_473.png,,,,0.0,
 418,1_1_474.png,,,,0.0,
