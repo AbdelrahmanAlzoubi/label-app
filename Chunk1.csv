@@ -516,7 +516,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 515,1_1_561.png,Simple,Small,Left,1.0,True
 516,1_1_562.png,Simple,Small,Right,1.0,False
 517,1_1_563.png,Simple,Large,Right,1.0,False
-518,1_1_564.png,,,,0.0,
+518,1_1_564.png,Simple,Large,Right,1.0,False
 519,1_1_565.png,,,,0.0,
 520,1_1_566.png,,,,0.0,
 521,1_1_567.png,,,,0.0,
