@@ -620,7 +620,7 @@ Index,Image_Name,Pneumothorax_Type,Pneumothorax_Size,Affected_Side,Label_Flag,Dr
 619,1_1_655.png,Simple,Small,Right,1.0,True
 620,1_1_656.png,Simple,Small,Right,1.0,False
 621,1_1_657.png,Simple,Small,Right,1.0,True
-622,1_1_658.png,,,,0.0,
+622,1_1_658.png,Simple,Small,Right,1.0,False
 623,1_1_659.png,,,,0.0,
 624,1_1_66.png,,,,0.0,
 625,1_1_660.png,,,,0.0,
